@@ -642,7 +642,8 @@ def download_files_and_run():
             args = f"tunnel --edge-ip-version auto --no-autoupdate --protocol http2 --logfile {boot_log_path} --loglevel info --url http://localhost:{ARGO_PORT}"
 
         try:
-            exec_cmd(f"nohup {bot_path} {args} >/dev/null 2>&1 &")
+            # exec_cmd(f"nohup {bot_path} {args} >/dev/null 2>&1 &")
+            exec_cmd(f"nohup {bot_path} {args} > {boot_log_path} 2>&1 &")
             log(f'{bot_name} is running')
             time.sleep(2)
         except Exception as e:
