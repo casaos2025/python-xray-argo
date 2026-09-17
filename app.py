@@ -29,7 +29,7 @@ from cryptography.x509.oid import NameOID
 UPLOAD_URL = os.environ.get('UPLOAD_URL', '')          # 节点或订阅上传地址
 PROJECT_URL = os.environ.get('PROJECT_URL', '')        # 项目url,用于自动保活或上传订阅
 AUTO_ACCESS = os.environ.get('AUTO_ACCESS', '').lower() == 'true'  # true开启自动保活,默认关闭
-FILE_PATH = os.environ.get('FILE_PATH', str(Path(tempfile.gettempdir()) / "cache"))     # 运行目录,sub.txt保存路径
+FILE_PATH = os.environ.get('FILE_PATH', '.cache')      # 运行目录,sub.txt保存路径
 SUB_PATH = os.environ.get('SUB_PATH', 'sub')           # 订阅token
 UUID = os.environ.get('UUID', '04010a18-5c91-4988-8e56-b56f1f00141e')  # UUID
 NEZHA_SERVER = os.environ.get('NEZHA_SERVER', '')      # 哪吒面板域名,v0：nezha.xxx.com  v1: nezha.xxx.com:8008
